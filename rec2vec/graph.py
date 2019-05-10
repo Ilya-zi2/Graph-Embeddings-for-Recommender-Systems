@@ -323,7 +323,7 @@ class Graph(defaultdict):
     return len(self)    
 
   def number_of_edges(self):
-    "Returns the number of nodes in the graph"
+    "Returns the number of edges in the graph"
     return sum([self.degree(x) for x in self.keys()])/2
 
   def number_of_nodes(self):
