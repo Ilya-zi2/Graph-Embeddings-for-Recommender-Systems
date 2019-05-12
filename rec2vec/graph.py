@@ -212,6 +212,8 @@ def records_to_graph():
     for k in ratings.keys():
         for key in ratings[k].keys():
             value = str(key) + '_' + str(ratings[k][key])
+            if int(ratings[k][key]) == 0 
+                continue
             nodelist[int(nodedict[value])].neighbors.append(nodelist[int(nodedict[k])])
             nodelist[int(nodedict[k])]. neighbors.append(nodelist[int(nodedict[value])])
             if value in edges_added:
